@@ -1,5 +1,3 @@
-package javavonkopfbisfuss;
-
 public class BierLied {
     public static void main(String args[]){
         int bierAnzahl = 99;

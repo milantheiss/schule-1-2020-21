@@ -1,5 +1,3 @@
-package kapitel3Java4U;
-
 public class Farbe1 {
     private int farbe;
     static int blau = 1;

@@ -1,0 +1,18 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project version="4">
+  <component name="ProjectModuleManager">
+    <modules>
+      <module fileurl="file://$PROJECT_DIR$/Hausaufgaben/2020_08_25/2020_08_25.iml" filepath="$PROJECT_DIR$/Hausaufgaben/2020_08_25/2020_08_25.iml" />
+      <module fileurl="file://$PROJECT_DIR$/Hausaufgaben/2020_08_31/2020_08_31.iml" filepath="$PROJECT_DIR$/Hausaufgaben/2020_08_31/2020_08_31.iml" />
+      <module fileurl="file://$PROJECT_DIR$/Hausaufgaben/2020_09_01/2020_09_01.iml" filepath="$PROJECT_DIR$/Hausaufgaben/2020_09_01/2020_09_01.iml" />
+      <module fileurl="file://$PROJECT_DIR$/Hausaufgaben/Hausaufgaben.iml" filepath="$PROJECT_DIR$/Hausaufgaben/Hausaufgaben.iml" />
+      <module fileurl="file://$PROJECT_DIR$/Java4U/Java4U.iml" filepath="$PROJECT_DIR$/Java4U/Java4U.iml" />
+      <module fileurl="file://$PROJECT_DIR$/JavaVonKopfBisFuss/JavaVonKopfBisFuss.iml" filepath="$PROJECT_DIR$/JavaVonKopfBisFuss/JavaVonKopfBisFuss.iml" />
+      <module fileurl="file://$PROJECT_DIR$/Java4U/Kap_3/Kap_3.iml" filepath="$PROJECT_DIR$/Java4U/Kap_3/Kap_3.iml" />
+      <module fileurl="file://$PROJECT_DIR$/Java4U/Kap_3-09_VererbungBuch/Kap_3-09_VererbungBuch.iml" filepath="$PROJECT_DIR$/Java4U/Kap_3-09_VererbungBuch/Kap_3-09_VererbungBuch.iml" />
+      <module fileurl="file://$PROJECT_DIR$/Java4U/Kap_3-10_MethodenUeberladen/Kap_3-10_MethodenUeberladen.iml" filepath="$PROJECT_DIR$/Java4U/Kap_3-10_MethodenUeberladen/Kap_3-10_MethodenUeberladen.iml" />
+      <module fileurl="file://$PROJECT_DIR$/miltheLibrary/miltheLibrary.iml" filepath="$PROJECT_DIR$/miltheLibrary/miltheLibrary.iml" />
+      <module fileurl="file://$PROJECT_DIR$/schule.iml" filepath="$PROJECT_DIR$/schule.iml" />
+    </modules>
+  </component>
+</project>

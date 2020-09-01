@@ -1,5 +1,3 @@
-package hausaufgaben;
-
 import java.util.Scanner;
 
 /**

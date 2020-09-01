@@ -1,5 +1,3 @@
-package kapitel3Java4U;
-
 public class Haupt {
     public static void main(String args[]){
         Rechteck r1 = new Rechteck();

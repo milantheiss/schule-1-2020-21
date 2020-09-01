@@ -1,5 +1,3 @@
-package kapitel3Java4U;
-
 public class Rechteck {
     private double seiteA;
     private double seiteB;
