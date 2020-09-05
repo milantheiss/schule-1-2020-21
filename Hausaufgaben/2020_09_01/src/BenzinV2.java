@@ -14,7 +14,7 @@ public class BenzinV2 {
         kilometerGefahren = sc.nextDouble();
 
         if (kilometerGefahren <= 0) {
-            System.out.println("Ungültige STrecke eingegeben");
+            System.out.println("Ungültige Strecke eingegeben");
         }
         else {
             multiplikator = 100 / kilometerGefahren;
