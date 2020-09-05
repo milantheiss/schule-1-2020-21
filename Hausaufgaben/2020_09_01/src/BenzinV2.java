@@ -7,10 +7,10 @@ public class BenzinV2 {
 
         System.out.println("Berechnung des Durchschnittsverbrauchs");
 
-        System.out.print("verbrauchter Kraftsoff in l: ");
+        System.out.print("Verbrauchter Kraftstoff in l: ");
         kraftstoffVerbraucht = sc.nextDouble();
 
-        System.out.print("gefahrene Strecke in km: ");
+        System.out.print("Gefahrene Strecke in km: ");
         kilometerGefahren = sc.nextDouble();
 
         if (kilometerGefahren <= 0) {
