@@ -21,7 +21,7 @@ public class Automat {
 
         System.out.print("1 Euro: ");
         int anzahl1E = scanner.nextInt();
-        gesamtGuthaben = gesamtGuthaben + (anzahl1E*1);2
+        gesamtGuthaben = gesamtGuthaben + (anzahl1E*1);
 
         System.out.print("2 Euro: ");
         int anzahl2E = scanner.nextInt();
