@@ -8,6 +8,7 @@
       <module fileurl="file://$PROJECT_DIR$/Hausaufgaben/2020_09_07/2020_09_07.iml" filepath="$PROJECT_DIR$/Hausaufgaben/2020_09_07/2020_09_07.iml" />
       <module fileurl="file://$PROJECT_DIR$/Hausaufgaben/2020_09_08/2020_09_08.iml" filepath="$PROJECT_DIR$/Hausaufgaben/2020_09_08/2020_09_08.iml" />
       <module fileurl="file://$PROJECT_DIR$/Hausaufgaben/2020_09_15/2020_09_15.iml" filepath="$PROJECT_DIR$/Hausaufgaben/2020_09_15/2020_09_15.iml" />
+      <module fileurl="file://$PROJECT_DIR$/Hausaufgaben/2020_11_16/2020_11_16.iml" filepath="$PROJECT_DIR$/Hausaufgaben/2020_11_16/2020_11_16.iml" />
       <module fileurl="file://$PROJECT_DIR$/Hausaufgaben/Hausaufgaben.iml" filepath="$PROJECT_DIR$/Hausaufgaben/Hausaufgaben.iml" />
       <module fileurl="file://$PROJECT_DIR$/Nachhilfe/IfUndVariablen/IfUndVariablen.iml" filepath="$PROJECT_DIR$/Nachhilfe/IfUndVariablen/IfUndVariablen.iml" />
       <module fileurl="file://$PROJECT_DIR$/Java4U/Java4U.iml" filepath="$PROJECT_DIR$/Java4U/Java4U.iml" />
@@ -19,8 +20,10 @@
       <module fileurl="file://$PROJECT_DIR$/JavaVonKopfBisFuss/Kapitel2/Kapitel2.iml" filepath="$PROJECT_DIR$/JavaVonKopfBisFuss/Kapitel2/Kapitel2.iml" />
       <module fileurl="file://$PROJECT_DIR$/JavaVonKopfBisFuss/Kapitel3/Kapitel3.iml" filepath="$PROJECT_DIR$/JavaVonKopfBisFuss/Kapitel3/Kapitel3.iml" />
       <module fileurl="file://$PROJECT_DIR$/Nachhilfe/Nachhilfe.iml" filepath="$PROJECT_DIR$/Nachhilfe/Nachhilfe.iml" />
+      <module fileurl="file://$PROJECT_DIR$/Hausaufgaben/Schiffeversenken/Schiffeversenken.iml" filepath="$PROJECT_DIR$/Hausaufgaben/Schiffeversenken/Schiffeversenken.iml" />
       <module fileurl="file://$PROJECT_DIR$/miltheLibrary/miltheLibrary.iml" filepath="$PROJECT_DIR$/miltheLibrary/miltheLibrary.iml" />
       <module fileurl="file://$PROJECT_DIR$/schule.iml" filepath="$PROJECT_DIR$/schule.iml" />
+      <module fileurl="file://$PROJECT_DIR$/spielwiese/spielwiese.iml" filepath="$PROJECT_DIR$/spielwiese/spielwiese.iml" />
     </modules>
   </component>
 </project>

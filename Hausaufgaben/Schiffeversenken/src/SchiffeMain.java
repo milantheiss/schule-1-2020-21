@@ -2,6 +2,7 @@ import java.util.Scanner;
 
 public class SchiffeMain {
     private static byte[][] position = new byte[1][2];
+    static byte[] userGuess = new byte[2];
     static Scanner scanner = new Scanner(System.in);
 
     public static void main(String[] args) {
@@ -24,11 +25,66 @@ public class SchiffeMain {
             System.out.print("\n");
         }
     }
-    static byte[][] getUserguess(){
-        System.out.println("Bitte geben Sie eine Position ein");
-        String tempPos = scanner.nextLine();
-        
-        return null;
+    static byte[] setUserguess(){
+        boolean fehler = true;
+        boolean fehlerZahl = true;
+        do {
+            System.out.println("Bitte geben Sie eine Position ein");
+            String tempPos = scanner.nextLine();
+            String tempXGuess = tempPos.substring(0, 1);
+            try {
+                userGuess[1] = Byte.parseByte(tempPos.substring(1,2));
+                fehlerZahl = false;
+            }catch (Exception e){
+                System.out.println("Invalid Input. Try again");
+                fehlerZahl = true;
+            }
+            if(tempXGuess.equalsIgnoreCase("a")){
+                userGuess[0] = 1;
+                fehler = false;
+            }
+            else if(tempXGuess.equalsIgnoreCase("b")){
+                userGuess[0] = 2;
+                fehler = false;
+            }
+            else if(tempXGuess.equalsIgnoreCase("c")){
+                userGuess[0] = 3;
+                fehler = false;
+            }
+            else if(tempXGuess.equalsIgnoreCase("d")){
+                userGuess[0] = 4;
+                fehler = false;
+            }
+            else if(tempXGuess.equalsIgnoreCase("e")){
+                userGuess[0] = 5;
+                fehler = false;
+            }
+            else if(tempXGuess.equalsIgnoreCase("f")){
+                userGuess[0] = 6;
+                fehler = false;
+            }
+            else if(tempXGuess.equalsIgnoreCase("g")){
+                userGuess[0] = 7;
+                fehler = false;
+            }
+            else if(tempXGuess.equalsIgnoreCase("h")){
+                userGuess[0] = 8;
+                fehler = false;
+            }
+            else if(tempXGuess.equalsIgnoreCase("i")){
+                userGuess[0] = 9;
+                fehler = false;
+            }
+            else if(tempXGuess.equalsIgnoreCase("j")){
+                userGuess[0] = 10;
+                fehler = false;
+            }
+            else {
+                System.out.println("Invalid Input. Try again");
+                fehler = true;
+            }
+        }while (fehler || fehlerZahl);
+        return userGuess;
     }
     static byte[][] getPosition(){
         position[0][2] = (byte)(Math.random()*2); //Rotation des Schiffes 0 == horizontal | 1 == vertikal
@@ -41,6 +97,9 @@ public class SchiffeMain {
             position[0][1] = (byte)((Math.random()*8)+1);
         }
         return position;
+    }
+    static void checkSquare(){
+
     }
 
 

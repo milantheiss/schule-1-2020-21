@@ -39,7 +39,7 @@ public class personendaten {
         System.out.print("Bitte geben Sie den Nachnamen der anzuzeigenden Person ein: ");
         String tempName = scanner.nextLine();
         if (daten.containsValue(tempName)) {
-            System.out.println("Persdaten.get(tempName));
+            System.out.println(Persdaten.get(tempName));
         }
     }
 
