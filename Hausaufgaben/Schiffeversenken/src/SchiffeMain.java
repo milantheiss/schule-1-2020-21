@@ -8,6 +8,7 @@ public class SchiffeMain {
     static UserGuess input = new UserGuess();
     static int maxHitcount = 0;
     static int hitcount = 0;
+    static byte shipCode = 2;
 
     public static void main(String[] args) {
         //Rand des Spielfeld
@@ -53,8 +54,10 @@ public class SchiffeMain {
         //@todo 3 mit Scanner ersetzen damit anzahlSchiffe variabel ist --> in Instanzvariable ändern
 
         for (int i = 0; i < schiffArr.length; i++) { //Für jedes Schiff wird in schiffefeld sein Platz auf 1 gesetzt
-            setSchiffefeld(schiffArr[i].getRotation(), schiffArr[i].getLength(), schiffArr[i].getxPos(), schiffArr[i].getyPos());
+            setSchiffefeld(i);
+            System.out.println("Schiff: "+i+" Rotation: "+schiffArr[i].getRotation()+" Länge: " + schiffArr[i].getLength()+ " Start x: "+schiffArr[i].getxPos()+ " Start Y: "+schiffArr[i].getyPos());
         }
+
 
         showShipField();
 
@@ -74,18 +77,7 @@ public class SchiffeMain {
 
     }
 
-    static void showShipField(){ //Zeigt Spielfeld an --> spielfeld Variable
-        System.out.print("\n");
-        for (int i = 0; i < schiffefeld.length; i++) {
-            System.out.print(schiffefeld[i][0]);
-            for (int j = 1; j < schiffefeld.length; j++) {
-                System.out.print("["+schiffefeld[i][j]+"]");
-            }
-            System.out.print("\n");
-        }
-    }
-
-    static void showPlayingField(){ //Zeigt Spielfeld an --> spielfeld Variable
+    static void showPlayingField(){ //Zeigt Spielfeld an --> spielfeld[][]
         System.out.print("\n");
         for (int i = 0; i < spielfeld.length; i++) {
             System.out.print(spielfeld[i][0]);
@@ -96,35 +88,89 @@ public class SchiffeMain {
         }
     }
 
-    static void setSchiffefeld(byte rotation, byte length, byte xStart, byte yStart){ //Übergibt an schiffefeld die Information welches Feld von Schiffen belegt ist
-        if(rotation == 0){//Horizontal
-            schiffefeld[yStart][xStart] = 1;
-            maxHitcount++;
-            if(xStart > (10-length)){ //X9 oder gerößer --> weiter Generierung x- --> nach LINKS
-                for (int i = 1; i < length; i++) {
-                    schiffefeld[yStart][(xStart - i)] = 1;
+    static void showShipField(){ //Zeigt Schiffefeld an --> schiffefeld[][]
+        System.out.print("\n");
+        for (int i = 0; i < schiffefeld.length; i++) {
+            for (int j = 0; j < schiffefeld.length; j++) {
+                System.out.print("["+schiffefeld[i][j]+"]");
+            }
+            System.out.print("\n");
+        }
+    }
+
+   /* static void showShipBorders(){ //Zeigt Zeigt belegten Platz von Schiffen an --> shipBorders[][]
+        System.out.print("\n");
+        for (int i = 0; i < shipBorders.length; i++) {
+            for (int j = 0; j < shipBorders.length; j++) {
+                System.out.print("["+shipBorders[i][j]+"]");
+            }
+            System.out.print("\n");
+        }
+    }*/
+
+    static void setSchiffefeld(int index){ //Übergibt an schiffefeld die Information welches Feld von Schiffen belegt ist
+        if(schiffArr[index].getRotation() == 0){//Horizontal
+            if(schiffArr[index].getxPos() > (10-schiffArr[index].getLength()+1)){ //X9 oder gerößer --> weiter Generierung x- --> nach LINKS
+                if (schiffefeld[schiffArr[index].getyPos()][schiffArr[index].getxPos()] == 1) { //--> Wenn Platz schon belegt ist wird Schiff neu positioniert
+                    schiffArr[index].reroll();
+                }
+                for (int i = 1; i < schiffArr[index].getLength(); i++) {
+                    if (schiffefeld[schiffArr[index].getyPos()][(schiffArr[index].getxPos()-i)] == 1) { //--> Wenn Platz schon belegt ist wird Schiff neu positioniert
+                        schiffArr[index].reroll();
+                    }
+                }
+
+                schiffefeld[schiffArr[index].getyPos()][schiffArr[index].getxPos()] = 1;
+                maxHitcount++;
+                for (int i = 1; i < schiffArr[index].getLength(); i++) {
+                    schiffefeld[schiffArr[index].getyPos()][(schiffArr[index].getxPos()-i)] = 1;
                     maxHitcount++;
                 }
             }
             else{//x8 oder kleiner --> weiter Generierung x+ --> nach RECHTS
-                for (int i = 1; i < length; i++) {
-                    schiffefeld[yStart][(xStart + i)] = 1;
+                if (schiffefeld[schiffArr[index].getyPos()][schiffArr[index].getxPos()] == 1) { //--> Wenn Platz schon belegt ist wird Schiff neu positioniert
+                    schiffArr[index].reroll();
+                }
+                for (int i = 1; i < schiffArr[index].getLength(); i++) {
+                    if (schiffefeld[schiffArr[index].getyPos()][(schiffArr[index].getxPos()+i)] == 1) { //--> Wenn Platz schon belegt ist wird Schiff neu positioniert
+                        schiffArr[index].reroll();
+                    }
+                }
+                for (int i = 1; i < schiffArr[index].getLength(); i++) {
+                    schiffefeld[schiffArr[index].getyPos()][(schiffArr[index].getxPos()+i)] = 1;
                     maxHitcount++;
                 }
             }
         }
-        else if(rotation == 1){//Vertikal
-            schiffefeld[yStart][xStart] = 1;
-            maxHitcount++;
-            if(yStart > (10-length+1)){ //y9 oder gerößer --> weiter Generierung y- --> nach OBEN
-                for (int i = 1; i < length; i++) {
-                    schiffefeld[(yStart - i)][xStart] = 1;
+        else if(schiffArr[index].getRotation() == 1){//Vertikal
+            if(schiffArr[index].getyPos() > (10-schiffArr[index].getLength()+1)){ //y9 oder gerößer --> weiter Generierung y- --> nach OBEN
+                if (schiffefeld[schiffArr[index].getyPos()][schiffArr[index].getxPos()] == 1) { //--> Wenn Platz schon belegt ist wird Schiff neu positioniert
+                    schiffArr[index].reroll();
+                }
+                for (int i = 1; i < schiffArr[index].getLength(); i++) {
+                    if (schiffefeld[(schiffArr[index].getyPos()-i)][schiffArr[index].getxPos()] == 1) { //--> Wenn Platz schon belegt ist wird Schiff neu positioniert
+                        schiffArr[index].reroll();
+                    }
+                }
+
+                schiffefeld[schiffArr[index].getyPos()][schiffArr[index].getxPos()] = 1;
+                maxHitcount++;
+                for (int i = 1; i < schiffArr[index].getLength(); i++) {
+                    schiffefeld[(schiffArr[index].getyPos()-i)][schiffArr[index].getxPos()] = 1;
                     maxHitcount++;
                 }
             }
             else{//y8 oder kleiner --> weiter Generierung y+ --> nach UNTEN
-                for (int i = 1; i < length; i++) {
-                    schiffefeld[(yStart + i)][xStart] = 1;
+                if (schiffefeld[schiffArr[index].getyPos()][schiffArr[index].getxPos()] == 1) { //--> Wenn Platz schon belegt ist wird Schiff neu positioniert
+                    schiffArr[index].reroll();
+                }
+                for (int i = 1; i < schiffArr[index].getLength(); i++) {
+                    if (schiffefeld[(schiffArr[index].getyPos()+i)][schiffArr[index].getxPos()] == 1) { //--> Wenn Platz schon belegt ist wird Schiff neu positioniert
+                        schiffArr[index].reroll();
+                    }
+                }
+                for (int i = 1; i < schiffArr[index].getLength(); i++) {
+                    schiffefeld[(schiffArr[index].getyPos()+i)][schiffArr[index].getxPos()] = 1;
                     maxHitcount++;
                 }
             }
@@ -147,4 +193,5 @@ public class SchiffeMain {
         }
         return hit;
     }
+
 }
