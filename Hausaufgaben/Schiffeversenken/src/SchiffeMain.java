@@ -136,6 +136,9 @@ public class SchiffeMain {
                         schiffArr[index].reroll();
                     }
                 }
+
+                schiffefeld[schiffArr[index].getyPos()][schiffArr[index].getxPos()] = 1;
+                maxHitcount++;
                 for (int i = 1; i < schiffArr[index].getLength(); i++) {
                     schiffefeld[schiffArr[index].getyPos()][(schiffArr[index].getxPos()+i)] = 1;
                     maxHitcount++;
@@ -169,6 +172,9 @@ public class SchiffeMain {
                         schiffArr[index].reroll();
                     }
                 }
+
+                schiffefeld[schiffArr[index].getyPos()][schiffArr[index].getxPos()] = 1;
+                maxHitcount++;
                 for (int i = 1; i < schiffArr[index].getLength(); i++) {
                     schiffefeld[(schiffArr[index].getyPos()+i)][schiffArr[index].getxPos()] = 1;
                     maxHitcount++;
