@@ -2,3 +2,5 @@
 /shelf/
 /out
 *.class
+*.iml
+/.idea
