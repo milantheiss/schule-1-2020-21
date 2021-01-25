@@ -11,7 +11,7 @@ public class Start {
         auto1.setMeinMieter(mieter1);
         mieter1.setMeinAuto(auto1);
 
-        String option;
+        String option = "";
 
         do {
             System.out.println("Bitte wählen Sie aus: ");
