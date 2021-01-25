@@ -1,25 +1,39 @@
 public class Auto {
     private double tankvolumen;
     private double tankinhalt;
-    private double verbrauch;
+     double verbrauch;
     private double kilometerstand;
 
     Auto(double tankvolumen, double tankinhalt, double verbrauch){
-        this.tankvolumen = tankvolumen;
-        this.tankinhalt = tankinhalt;
-        this.verbrauch = verbrauch;
+        setTankvolumen(tankvolumen);
+        setTankinhalt(tankinhalt);
+        setVerbrauch(verbrauch);
     }
 
     public void tanken(double liter){
-        setTankinhalt(getTankinhalt()+liter);
+        if((getTankinhalt()+liter)<=getTankvolumen()){
+            setTankinhalt(getTankinhalt()+liter);
+        }
+        else{
+            System.out.println("Tank ist zu voll für die geplante Menge.");
+        }
     }
 
     public void fahren(double km){
-        setTankinhalt(getTankinhalt()+km*getVerbrauch());
+        if(km<0){
+            km *= -1;
+            System.out.println("Achtung! Du fährst rückwärts.");
+        }
+        if(km*getVerbrauch() > getTankinhalt()){
+            System.out.println("Der Tank ist nicht voll genug.");
+        }
+        else {
+            setTankinhalt(getTankinhalt() - km * getVerbrauch());
+        }
     }
 
     public double maxFahrbareStrecke(){
-        return getTankinhalt()/getVerbrauch()*100;
+        return getTankinhalt()/getVerbrauch();
     }
 
     public void setTankvolumen(double tankvolumen){
