@@ -1,3 +1,5 @@
+package AutoMieter;
+
 public class Auto {
     private String marke;
     private String modell;

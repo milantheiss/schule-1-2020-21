@@ -1,9 +1,11 @@
+package AutoMieter;
+
 import java.io.BufferedReader;
 import java.io.IOException;
 import java.io.InputStreamReader;
 
 /**
- * Diese Klasse dient dazu, Zahlen, Buchstaben und Texte von der Tastatur
+ * Diese Klasse dient dazu, Zahlen, Buchstaben und Texte von der AutoMieter.Tastatur
  * einzulesen.
  */
 public class Tastatur {

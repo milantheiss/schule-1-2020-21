@@ -1,3 +1,5 @@
+package AutoMieter;
+
 public class Mieter {
     private String name;
     private int kundennummer;

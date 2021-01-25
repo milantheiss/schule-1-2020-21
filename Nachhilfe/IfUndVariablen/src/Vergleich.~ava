@@ -3,10 +3,10 @@ public class Vergleich {
         System.out.println("Vergleich");
 
         System.out.print("1. Zahl: ");
-        int zahl1 = Tastatur.leseZahl();    //Nimmt erste Zahl entgegen
+        int zahl1 = AutoMieter.Tastatur.leseZahl();    //Nimmt erste Zahl entgegen
 
         System.out.print("2. Zahl: ");
-        int zahl2 = Tastatur.leseZahl();    //Nimmt zweite Zahl entgegen
+        int zahl2 = AutoMieter.Tastatur.leseZahl();    //Nimmt zweite Zahl entgegen
 
 
         if (zahl1 > zahl2){                 //Wenn Zahl1 größer ist als Zahl2 dann...
