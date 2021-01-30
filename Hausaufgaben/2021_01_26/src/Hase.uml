@@ -1,0 +1,49 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<Diagram>
+  <ID>JAVA</ID>
+  <OriginalElement>Hase</OriginalElement>
+  <nodes>
+    <node x="16.054166666666646" y="0.0">Hase</node>
+    <node x="66.97083333333333" y="518.0">StartHasenjagd</node>
+    <node x="0.0" y="259.0">Jaeger</node>
+    <node x="290.0541666666667" y="0.0">TestUML</node>
+  </nodes>
+  <notes />
+  <edges>
+    <edge source="Jaeger" target="Hase">
+      <point x="-22.375" y="-104.5" />
+      <point x="67.125" y="234.0" />
+      <point x="73.30416666666665" y="234.0" />
+      <point x="-57.25" y="104.5" />
+    </edge>
+    <edge source="Hase" target="Jaeger">
+      <point x="-19.08333333333333" y="104.5" />
+      <point x="22.375" y="-104.5" />
+    </edge>
+    <edge source="StartHasenjagd" target="Jaeger">
+      <point x="-60.0" y="-27.0" />
+      <point x="86.97083333333333" y="493.0" />
+      <point x="44.75" y="493.0" />
+      <point x="-44.75" y="104.5" />
+    </edge>
+    <edge source="StartHasenjagd" target="Hase">
+      <point x="60.0" y="-27.0" />
+      <point x="206.97083333333333" y="493.0" />
+      <point x="200.5" y="493.0" />
+      <point x="200.5" y="234.0" />
+      <point x="225.9708333333333" y="234.0" />
+      <point x="95.41666666666666" y="104.5" />
+    </edge>
+  </edges>
+  <settings layout="Hierarchic Group" zoom="1.0" x="123.0" y="286.0" />
+  <SelectedNodes>
+    <node>TestUML</node>
+  </SelectedNodes>
+  <Categories>
+    <Category>Fields</Category>
+    <Category>Methods</Category>
+  </Categories>
+  <SCOPE>All</SCOPE>
+  <VISIBILITY>private</VISIBILITY>
+</Diagram>
+
