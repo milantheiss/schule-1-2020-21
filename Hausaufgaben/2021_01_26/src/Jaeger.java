@@ -20,7 +20,7 @@ public class Jaeger {
     }
 
     public void setZielgenauigkeit() {
-        this.zielgenauigkeit = (int)Math.random()*10+1;
+        this.zielgenauigkeit = (int)(Math.random()*10)+1;
     }
 
     public String getName() {
