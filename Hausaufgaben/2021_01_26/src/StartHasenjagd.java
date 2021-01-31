@@ -38,13 +38,13 @@ public class StartHasenjagd {
 
         // Hase schnuppert wer auf ihn zielt
         // (Zugriff über das Hasenobjekt auf den Namen des Jägers)
-        System.out.println("Hase sucht nach gefahren");
+        System.out.println("Hase sucht nach Gefahren");
         System.out.println("Der Hase sieht Jäger "+hase1.getJeager().getName());
 
         // Der Jäger schießt
         // (Auswertung Hasenschnelligkeit : Zielgenauigkeit)
         System.out.println("Der Jäger schießt!");
-        if(jaeger1.getHase().getGegesseneMoehrchen()/jaeger1.getZielgenauigkeit()  >= 1){
+        if(jaeger1.getHase().getGegesseneMoehrchen()/jaeger1.getZielgenauigkeit()  <= 1){
             System.out.println("Der Jäger trifft den Hase!");
         }else {
             System.out.println("Der Hase entwicht dem Jäger");
