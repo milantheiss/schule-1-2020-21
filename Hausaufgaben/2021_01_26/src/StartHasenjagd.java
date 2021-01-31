@@ -44,7 +44,7 @@ public class StartHasenjagd {
         // Der Jäger schießt
         // (Auswertung Hasenschnelligkeit : Zielgenauigkeit)
         System.out.println("Der Jäger schießt!");
-        if((jaeger1.getHase().getGegesseneMoehrchen()/ jaeger1.getZielgenauigkeit()) <= jaeger1.getZielgenauigkeit()){
+        if(jaeger1.getHase().getGegesseneMoehrchen()/jaeger1.getZielgenauigkeit()  >= 1){
             System.out.println("Der Jäger trifft den Hase!");
         }else {
             System.out.println("Der Hase entwicht dem Jäger");
