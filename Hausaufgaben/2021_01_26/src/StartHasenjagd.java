@@ -12,6 +12,8 @@ public class StartHasenjagd {
         // Objekt für einen Jaeger erzeugen
         Jaeger jaeger1 = new Jaeger("Franz"); //@todo User input
 
+        Tageszeit tag = new Tageszeit(false);
+
         // 1:1-Assoziation herstellen
         hase1.setJeager(jaeger1);
         jaeger1.setHase(hase1);
@@ -21,10 +23,10 @@ public class StartHasenjagd {
         // die Hasenschnelligkeit wird auf die Anzahl der gefressenen Möhrchen festgelegt)
         System.out.println("Wie viele Möhrchen werden verfüttert");
         hase1.setGegesseneMoehrchen(scanner.nextInt());
+        System.out.println(hase1.getGegesseneMoehrchen());
 
         // Jaeger trinkt Zielwasser
         // (Mit einer Zufallszahl (Random) zwischen 1 und 10 wird die Zielgenauigkeit festgelegt)
-        jaeger1.setZielgenauigkeit();
         System.out.println(jaeger1.getZielgenauigkeit());
 
         // Die Jagd beginnt
@@ -44,7 +46,16 @@ public class StartHasenjagd {
         // Der Jäger schießt
         // (Auswertung Hasenschnelligkeit : Zielgenauigkeit)
         System.out.println("Der Jäger schießt!");
-        if(jaeger1.getHase().getGegesseneMoehrchen()/jaeger1.getZielgenauigkeit()  <= 1){
+
+        if(tag.getHell()){
+            jaeger1.getHase().setGegesseneMoehrchen(5);
+        }else {
+            jaeger1.setZielgenauigkeit(3);
+        }
+
+        System.out.println(jaeger1.getZielgenauigkeit());
+
+        if((jaeger1.getHase().getGegesseneMoehrchen()/jaeger1.getZielgenauigkeit()) <= 1){
             System.out.println("Der Jäger trifft den Hase!");
         }else {
             System.out.println("Der Hase entwicht dem Jäger");

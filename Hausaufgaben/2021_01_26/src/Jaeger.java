@@ -1,6 +1,6 @@
 public class Jaeger {
     private String name;
-    private int zielgenauigkeit;
+    private int zielgenauigkeit = (int)(Math.random()*10)+1;
     private Hase hase;
 
     Jaeger(String name){
@@ -19,9 +19,10 @@ public class Jaeger {
         return zielgenauigkeit;
     }
 
-    public void setZielgenauigkeit() {
-        this.zielgenauigkeit = (int)(Math.random()*10)+1;
+    public void setZielgenauigkeit(int bonus) {
+        zielgenauigkeit += bonus;
     }
+
 
     public String getName() {
         return name;
