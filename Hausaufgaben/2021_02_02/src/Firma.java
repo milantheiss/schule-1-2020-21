@@ -2,7 +2,7 @@ import java.util.ArrayList;
 
 public class Firma {
     private String name;
-    ArrayList<Automat> meineAutomaten = new ArrayList<Automat>();
+    private ArrayList<Automat> meineAutomaten = new ArrayList<Automat>();
 
     public String getName() {
         return name;

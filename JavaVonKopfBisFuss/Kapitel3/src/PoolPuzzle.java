@@ -6,7 +6,7 @@ public class PoolPuzzle {
     public static void main(String[] args) {
 
 
-        while( ){
+        while(4==7){
 
             setFläche.höhe = (x+1)*2;
             setFläche.breate = x + 4;

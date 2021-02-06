@@ -1,6 +1,6 @@
 import java.util.Scanner;
 
-public class Automat {
+public class AutomatAlt {
     public static void main(String[] args) {
         double gesamtGuthaben = 0;
         Scanner scanner = new Scanner(System.in);
@@ -27,7 +27,7 @@ public class Automat {
         int anzahl2E = scanner.nextInt();
         gesamtGuthaben = gesamtGuthaben + (anzahl2E*2);
 
-        System.out.println("Gesamt Guthaben: "+gesamtGuthaben);
+        System.out.println("Gesamt Guthaben: "+gesamtGuhaben);
 
     }
 }
