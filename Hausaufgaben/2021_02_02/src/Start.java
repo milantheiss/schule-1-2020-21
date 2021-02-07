@@ -1,4 +1,3 @@
-
 import java.util.Scanner;
 
 public class Start {
@@ -58,18 +57,17 @@ public class Start {
         Scanner scanner = new Scanner(System.in);
         System.out.println("Wie viele Automaten sollen erstellt werden: ");
         int anzahl = Integer.parseInt(scanner.nextLine());
-        Automat automaten[] = new Automat[anzahl];
 
-        for (int i = 0; i < automaten.length; i++) {
-            automaten[i] = new Automat();
-            firma1.setMeineAutomaten(automaten[i]);
-            automaten[i].setMeineFirma(firma1);
+        for (int i = 0; i < anzahl; i++) {
+            Automat automat = new Automat();
+            firma1.setMeineAutomaten(automat);
+            automat.setMeineFirma(firma1);
 
             System.out.println("Typ des Automatens");
-            automaten[i].setTyp(scanner.nextLine());
+            automat.setTyp(scanner.nextLine());
 
             System.out.println("Kassenstand des Automatens");
-            automaten[i].setKassenstand(Integer.parseInt(scanner.nextLine()));
+            automat.setKassenstand(Integer.parseInt(scanner.nextLine()));
         }
     }
 
