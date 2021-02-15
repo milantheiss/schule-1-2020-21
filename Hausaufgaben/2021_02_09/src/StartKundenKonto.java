@@ -4,26 +4,28 @@ import java.util.Scanner;
 public class StartKundenKonto {
     public static void main(String[] args) {
         Scanner scanner = new Scanner(System.in);
-        Kunde k1 = new Kunde();
-        Kunde k2 = new Kunde();
+        ArrayList<Kunde> allKunden = new ArrayList<>();
+        int anzahlKunden = 0;
 
-        System.out.println("Bitte geben Sie einen Namen für den neuen Kunden ein: ");
-        k1.setName(scanner.nextLine());
-        System.out.println("Bitte geben Sie einen Namen für den zweiten Kunden ein: ");
-        k2.setName(scanner.nextLine());
+        do{
+            allKunden.add(new Kunde());
+            System.out.print("Bitte geben Sie einen Namen für den neuen Kunden ein: ");
+            allKunden.get(anzahlKunden).setName(scanner.nextLine());
+            System.out.print("Wie viele Konten sollen erstellt werden: ");
+            int anzahl = Integer.parseInt(scanner.nextLine());
+            for (int i = 0; i < anzahl; i++) {
+                System.out.print("Geben sie die Kontonummer für das "+(i+1)+". Konto an: ");
+                allKunden.get(anzahlKunden).setMeineKonten(new Konto(scanner.nextLine()));
+            }
+            anzahlKunden++;
+            System.out.print("Soll ein weiterer Kunde erstellt werden: [y/n] ");
+        }while(!scanner.nextLine().equalsIgnoreCase("n"));
 
-        k1.setMeineKonten(new Konto("11111"));
-        k1.setMeineKonten(new Konto("22222"));
-
-        k2.setMeineKonten(new Konto("33333"));
-        k2.setMeineKonten(new Konto("44444"));
-
-        System.out.println("Hier die Konten von Frau/Herr "+k1.getName());
-        System.out.println("Das Konto 1 hat die Nummer: " + k1.getMeineKonten().get(0).getKontonummer());
-        System.out.println("Das Konto 2 hat die Nummer: " + k1.getMeineKonten().get(1).getKontonummer());
-
-        System.out.println("Hier die Konten von Frau/Herr "+k2.getName());
-        System.out.println("Das Konto 1 hat die Nummer: " + k2.getMeineKonten().get(0).getKontonummer());
-        System.out.println("Das Konto 2 hat die Nummer: " + k2.getMeineKonten().get(1).getKontonummer());
+        for (int i = 0; i < allKunden.size(); i++) {
+            System.out.println("Hier die Konten von Frau/Herr "+ allKunden.get(i).getName());
+            for (int j = 0; j < allKunden.get(i).getMeineKonten().size(); j++) {
+                System.out.println("Das Konto " + (j+1) + ". hat die Nummer: " + allKunden.get(i).getMeineKonten().get(j).getKontonummer());
+            }
+        }
     }
 }
