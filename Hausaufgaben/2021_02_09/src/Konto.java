@@ -2,8 +2,9 @@ public class Konto {
     private String kontonummer;
     private Kunde meinKunde;
 
-    public Konto(String kontonummer) {
+    public Konto(String kontonummer, Kunde meinKunde) {
         this.kontonummer = kontonummer;
+        this.meinKunde = meinKunde;
     }
 
     public String getKontonummer() {

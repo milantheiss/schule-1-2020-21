@@ -4,6 +4,10 @@ public class Kunde {
     private String name;
     private ArrayList<Konto> meineKonten = new ArrayList<Konto>();
 
+    public Kunde(String name){
+        this.name = name;
+    }
+
     public String getName() {
         return name;
     }

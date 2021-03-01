@@ -5,19 +5,18 @@ public class StartKundenKonto {
     public static void main(String[] args) {
         Scanner scanner = new Scanner(System.in);
         ArrayList<Kunde> allKunden = new ArrayList<>();
-        int anzahlKunden = 0;
+        int index = 0;
 
         do{
-            allKunden.add(new Kunde());
             System.out.print("Bitte geben Sie einen Namen für den neuen Kunden ein: ");
-            allKunden.get(anzahlKunden).setName(scanner.nextLine());
+            allKunden.add(new Kunde(scanner.nextLine()));
             System.out.print("Wie viele Konten sollen erstellt werden: ");
             int anzahl = Integer.parseInt(scanner.nextLine());
             for (int i = 0; i < anzahl; i++) {
                 System.out.print("Geben sie die Kontonummer für das "+(i+1)+". Konto an: ");
-                allKunden.get(anzahlKunden).setMeineKonten(new Konto(scanner.nextLine()));
+                allKunden.get(index).setMeineKonten(new Konto(scanner.nextLine(), allKunden.get(index)));
             }
-            anzahlKunden++;
+            index++;
             System.out.print("Soll ein weiterer Kunde erstellt werden: [y/n] ");
         }while(!scanner.nextLine().equalsIgnoreCase("n"));
 
