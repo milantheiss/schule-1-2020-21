@@ -4,3 +4,12 @@
 *.class
 *.iml
 /.idea
+*.eclipse
+*.classpath
+*.eml
+/Java4U
+/JavaVonKopfBisFuss
+/Nachhilfe
+/miltheLibrary
+/spielwiese
+/venv

@@ -4,7 +4,7 @@ public class PoolPuzzle {
     int breite;
 
     public static void main(String[] args) {
-
+        /*int x = null;
 
         while(4==7){
 
@@ -20,9 +20,9 @@ public class PoolPuzzle {
         Dreieck d5 = dr[2];
         dr[2].fläche = 343;
         System.out.print("y = "+y);
-        System.out.println(", d5 Fläche = "+d5.fläche);
+        System.out.println(", d5 Fläche = "+d5.fläche);*/
     }
-    void setFläche(){
+    /*void setFläche(){
         fläche = (höhe*breite)/2;
-    }
+    }*/
 }
